@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='git部署Hugo   第一次部署hugo
-git init ##初始化仓库 git remote add origin ##后面加上仓库链接，链接远程仓库 git add . git commit -m &amp;quot;first&amp;quot; git push -u origin master	##推送到远程仓库   后续更新hugo
-git add . git status git commit -m &amp;quot;update&amp;quot; git push   '><title>Git命令备忘录</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='准备SM.MS图床 先自行注册一个账号
+SM.MS注册地址：Register - SM.MS - Simple Free Image Hosting
+注册完成登陆后，来到首页点击User下的Dashboard
+ image-20211204013246251 
+进入之后可以看到左侧有一个API Token，进去点击生成令牌，然后会出现一串字符，这个会在后面需要用到，可以先保存起来，到这里SM.MS的部分就结束了
+ image-20211204014118980 
+Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它
+ image-20211204015116329 
+下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去
+C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了之后，在状态栏'><title>Typora&#43;PicGo Core&#43;SM.MS实现自动上传图片</title>
 
-<link rel='canonical' href='https://magicpara.github.io/p/git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/'>
+<link rel='canonical' href='https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Git命令备忘录'>
-<meta property='og:description' content='git部署Hugo   第一次部署hugo
-git init ##初始化仓库 git remote add origin ##后面加上仓库链接，链接远程仓库 git add . git commit -m &amp;quot;first&amp;quot; git push -u origin master	##推送到远程仓库   后续更新hugo
-git add . git status git commit -m &amp;quot;update&amp;quot; git push   '>
-<meta property='og:url' content='https://magicpara.github.io/p/git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Typora&#43;PicGo Core&#43;SM.MS实现自动上传图片'>
+<meta property='og:description' content='准备SM.MS图床 先自行注册一个账号
+SM.MS注册地址：Register - SM.MS - Simple Free Image Hosting
+注册完成登陆后，来到首页点击User下的Dashboard
+ image-20211204013246251 
+进入之后可以看到左侧有一个API Token，进去点击生成令牌，然后会出现一串字符，这个会在后面需要用到，可以先保存起来，到这里SM.MS的部分就结束了
+ image-20211204014118980 
+Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它
+ image-20211204015116329 
+下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去
+C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了之后，在状态栏'>
+<meta property='og:url' content='https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/'>
 <meta property='og:site_name' content='魔法师の手抄笔记'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2021-12-02T23:35:22&#43;08:00'/><meta property='article:modified_time' content='2021-12-02T23:35:22&#43;08:00'/><meta property='og:image' content='https://magicpara.github.io/' />
-<meta name="twitter:title" content="Git命令备忘录">
-<meta name="twitter:description" content="git部署Hugo   第一次部署hugo
-git init ##初始化仓库 git remote add origin ##后面加上仓库链接，链接远程仓库 git add . git commit -m &amp;quot;first&amp;quot; git push -u origin master	##推送到远程仓库   后续更新hugo
-git add . git status git commit -m &amp;quot;update&amp;quot; git push   "><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2021-12-04T01:11:08&#43;08:00'/><meta property='article:modified_time' content='2021-12-04T01:11:08&#43;08:00'/><meta property='og:image' content='https://magicpara.github.io/' />
+<meta name="twitter:title" content="Typora&#43;PicGo Core&#43;SM.MS实现自动上传图片">
+<meta name="twitter:description" content="准备SM.MS图床 先自行注册一个账号
+SM.MS注册地址：Register - SM.MS - Simple Free Image Hosting
+注册完成登陆后，来到首页点击User下的Dashboard
+ image-20211204013246251 
+进入之后可以看到左侧有一个API Token，进去点击生成令牌，然后会出现一串字符，这个会在后面需要用到，可以先保存起来，到这里SM.MS的部分就结束了
+ image-20211204014118980 
+Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它
+ image-20211204015116329 
+下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去
+C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了之后，在状态栏"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://magicpara.github.io/' />
     <link rel="shortcut icon" href="favicon.png" />
 
@@ -74,7 +95,7 @@ git add . git status git commit -m &amp;quot;update&amp;quot; git push   "><meta
     
 
     <h2 class="article-title">
-        <a href="/p/git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/">Git命令备忘录</a>
+        <a href="/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/">Typora&#43;PicGo Core&#43;SM.MS实现自动上传图片</a>
     </h2>
 
     
@@ -92,7 +113,7 @@ git add . git status git commit -m &amp;quot;update&amp;quot; git push   "><meta
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 02, 2021</time>
+                <time class="article-time--published">Dec 04, 2021</time>
             </div>
         
 
@@ -117,24 +138,59 @@ git add . git status git commit -m &amp;quot;update&amp;quot; git push   "><meta
 </header>
 
     <section class="article-content">
-    <h2 id="git部署hugo">git部署Hugo</h2>
-<ul>
-<li>
-<p>第一次部署hugo</p>
-<pre tabindex="0"><code class="language-git" data-lang="git">git init ##初始化仓库
-git remote add origin ##后面加上仓库链接，链接远程仓库
-git add .
-git commit -m &quot;first&quot;
-git push -u origin master	##推送到远程仓库
-</code></pre></li>
-<li>
-<p>后续更新hugo</p>
-<pre tabindex="0"><code class="language-git" data-lang="git">git add .
-git status
-git commit -m &quot;update&quot;
-git push
-</code></pre></li>
-</ul>
+    <h3 id="准备smms图床">准备SM.MS图床</h3>
+<p>先自行注册一个账号</p>
+<p>SM.MS注册地址：<a class="link" href="https://sm.ms/register"  target="_blank" rel="noopener"
+    >Register - SM.MS - Simple Free Image Hosting</a></p>
+<p>注册完成登陆后，来到首页点击User下的Dashboard</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2021/12/04/qOSzfwx3cG5yQLF.png" >
+		<img src="https://s2.loli.net/2021/12/04/qOSzfwx3cG5yQLF.png"
+			
+			
+			
+			loading="lazy"
+			alt="image-20211204013246251">
+	</a>
+	
+	<figcaption>image-20211204013246251</figcaption>
+	
+</figure></p>
+<p>进入之后可以看到左侧有一个API Token，进去点击生成令牌，然后会出现一串字符，这个会在后面需要用到，可以先保存起来，到这里SM.MS的部分就结束了</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2021/12/04/vFT5urqtDXIo2lN.png" >
+		<img src="https://s2.loli.net/2021/12/04/vFT5urqtDXIo2lN.png"
+			
+			
+			
+			loading="lazy"
+			alt="image-20211204014118980">
+	</a>
+	
+	<figcaption>image-20211204014118980</figcaption>
+	
+</figure></p>
+<h3 id="typora配置picgo-core">Typora配置PicGo-Core</h3>
+<p>首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2021/12/04/VPwhv1GNl2IJKUF.png" >
+		<img src="https://s2.loli.net/2021/12/04/VPwhv1GNl2IJKUF.png"
+			
+			
+			
+			loading="lazy"
+			alt="image-20211204015116329">
+	</a>
+	
+	<figcaption>image-20211204015116329</figcaption>
+	
+</figure></p>
+<p>下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去</p>
+<pre tabindex="0"><code>C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64
+</code></pre><p>进入了之后，在状态栏</p>
 
 </section>
 
@@ -288,7 +344,12 @@ git push
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#git部署hugo">git部署Hugo</a></li>
+    <li>
+      <ol>
+        <li><a href="#准备smms图床">准备SM.MS图床</a></li>
+        <li><a href="#typora配置picgo-core">Typora配置PicGo-Core</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
                 </div>

@@ -6,7 +6,68 @@
         <description>Recent content on 魔法师の手抄笔记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 02 Dec 2021 23:35:22 +0800</lastBuildDate><atom:link href="https://magicpara.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 04 Dec 2021 01:11:08 +0800</lastBuildDate><atom:link href="https://magicpara.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Typora&#43;PicGo Core&#43;SM.MS实现自动上传图片</title>
+        <link>https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/</link>
+        <pubDate>Sat, 04 Dec 2021 01:11:08 +0800</pubDate>
+        
+        <guid>https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/</guid>
+        <description>&lt;h3 id=&#34;准备smms图床&#34;&gt;准备SM.MS图床&lt;/h3&gt;
+&lt;p&gt;先自行注册一个账号&lt;/p&gt;
+&lt;p&gt;SM.MS注册地址：&lt;a class=&#34;link&#34; href=&#34;https://sm.ms/register&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Register - SM.MS - Simple Free Image Hosting&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注册完成登陆后，来到首页点击User下的Dashboard&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2021/12/04/qOSzfwx3cG5yQLF.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2021/12/04/qOSzfwx3cG5yQLF.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;image-20211204013246251&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;image-20211204013246251&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;进入之后可以看到左侧有一个API Token，进去点击生成令牌，然后会出现一串字符，这个会在后面需要用到，可以先保存起来，到这里SM.MS的部分就结束了&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2021/12/04/vFT5urqtDXIo2lN.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2021/12/04/vFT5urqtDXIo2lN.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;image-20211204014118980&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;image-20211204014118980&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;typora配置picgo-core&#34;&gt;Typora配置PicGo-Core&lt;/h3&gt;
+&lt;p&gt;首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2021/12/04/VPwhv1GNl2IJKUF.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2021/12/04/VPwhv1GNl2IJKUF.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;image-20211204015116329&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;image-20211204015116329&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;进入了之后，在状态栏&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Git命令备忘录</title>
         <link>https://magicpara.github.io/p/git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/</link>
         <pubDate>Thu, 02 Dec 2021 23:35:22 +0800</pubDate>
