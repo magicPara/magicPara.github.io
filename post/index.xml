@@ -19,10 +19,11 @@ SM.MS注册地址：Register - SM.MS - Simple Free Image Hosting
  image-20211204013246251 
 进入之后可以看到左侧有一个API Token，进去点击生成令牌，然后会出现一串字符，这个会在后面需要用到，可以先保存起来，到这里SM.MS的部分就结束了
  image-20211204014118980 
-Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它
- image-20211204015116329 
-下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去
-C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了之后，在状态栏</description>
+Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它，插入图片时的操作和下面的网络与本地图片上传规则可以先不更改，等成功后再操作
+ image-20211204015116329.png 
+下载完了之后，打开配置文件，用下面的代码替换掉配置文件里的内容，并把上面SM.MS里的令牌复制到token后面
+{ &amp;#34;picBed&amp;#34;: { &amp;#34;uploader&amp;#34;: &amp;#34;smms&amp;#34;, // 代表当前的默认上传图床为 SM.MS,  &amp;#34;smms&amp;#34;: { &amp;#34;token&amp;#34;: &amp;#34;&amp;#34; // 从 https://sm.ms/home/apitoken 获取的 token  } }, &amp;#34;picgoPlugins&amp;#34;: {} // 为插件预留 } 然后点击验证图片上传选项，就可以看到图片上传成功了，这时候就可以把插入图片时的操作换为上图中的上传图像，安心写作了
+ image-20211204232732599</description>
     </item>
     
     <item>
@@ -31,9 +32,7 @@ C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了
       <pubDate>Thu, 02 Dec 2021 23:35:22 +0800</pubDate>
       
       <guid>https://magicpara.github.io/p/git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
-      <description>git部署Hugo   第一次部署hugo
-git init ##初始化仓库 git remote add origin ##后面加上仓库链接，链接远程仓库 git add . git commit -m &amp;quot;first&amp;quot; git push -u origin master	##推送到远程仓库   后续更新hugo
-git add . git status git commit -m &amp;quot;update&amp;quot; git push   </description>
+      <description>拉取远程仓库 git init	##初始化仓库 git remote add origin	##后面加上仓库链接，链接远程仓库 git pull -u origin master	拉取至本地仓库 第一次部署hugo git init git remote add origin ##后面加上仓库链接，链接远程仓库 git add . git commit -m &amp;quot;first&amp;quot; git push -u origin master	##推送到远程仓库 后续更新hugo git add . git status git commit -m &amp;quot;update&amp;quot; git push </description>
     </item>
     
     <item>

@@ -7,10 +7,11 @@ SM.MS注册地址：Register - SM.MS - Simple Free Image Hosting
  image-20211204013246251 
 进入之后可以看到左侧有一个API Token，进去点击生成令牌，然后会出现一串字符，这个会在后面需要用到，可以先保存起来，到这里SM.MS的部分就结束了
  image-20211204014118980 
-Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它
- image-20211204015116329 
-下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去
-C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了之后，在状态栏'><title>Typora&#43;PicGo Core&#43;SM.MS实现自动上传图片</title>
+Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它，插入图片时的操作和下面的网络与本地图片上传规则可以先不更改，等成功后再操作
+ image-20211204015116329.png 
+下载完了之后，打开配置文件，用下面的代码替换掉配置文件里的内容，并把上面SM.MS里的令牌复制到token后面
+{ &amp;#34;picBed&amp;#34;: { &amp;#34;uploader&amp;#34;: &amp;#34;smms&amp;#34;, // 代表当前的默认上传图床为 SM.MS,  &amp;#34;smms&amp;#34;: { &amp;#34;token&amp;#34;: &amp;#34;&amp;#34; // 从 https://sm.ms/home/apitoken 获取的 token  } }, &amp;#34;picgoPlugins&amp;#34;: {} // 为插件预留 } 然后点击验证图片上传选项，就可以看到图片上传成功了，这时候就可以把插入图片时的操作换为上图中的上传图像，安心写作了
+ image-20211204232732599'><title>Typora&#43;PicGo Core&#43;SM.MS实现自动上传图片</title>
 
 <link rel='canonical' href='https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/'>
 
@@ -21,10 +22,11 @@ SM.MS注册地址：Register - SM.MS - Simple Free Image Hosting
  image-20211204013246251 
 进入之后可以看到左侧有一个API Token，进去点击生成令牌，然后会出现一串字符，这个会在后面需要用到，可以先保存起来，到这里SM.MS的部分就结束了
  image-20211204014118980 
-Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它
- image-20211204015116329 
-下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去
-C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了之后，在状态栏'>
+Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它，插入图片时的操作和下面的网络与本地图片上传规则可以先不更改，等成功后再操作
+ image-20211204015116329.png 
+下载完了之后，打开配置文件，用下面的代码替换掉配置文件里的内容，并把上面SM.MS里的令牌复制到token后面
+{ &amp;#34;picBed&amp;#34;: { &amp;#34;uploader&amp;#34;: &amp;#34;smms&amp;#34;, // 代表当前的默认上传图床为 SM.MS,  &amp;#34;smms&amp;#34;: { &amp;#34;token&amp;#34;: &amp;#34;&amp;#34; // 从 https://sm.ms/home/apitoken 获取的 token  } }, &amp;#34;picgoPlugins&amp;#34;: {} // 为插件预留 } 然后点击验证图片上传选项，就可以看到图片上传成功了，这时候就可以把插入图片时的操作换为上图中的上传图像，安心写作了
+ image-20211204232732599'>
 <meta property='og:url' content='https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/'>
 <meta property='og:site_name' content='魔法师の手抄笔记'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2021-12-04T01:11:08&#43;08:00'/><meta property='article:modified_time' content='2021-12-04T01:11:08&#43;08:00'/><meta property='og:image' content='https://magicpara.github.io/' />
@@ -35,10 +37,11 @@ SM.MS注册地址：Register - SM.MS - Simple Free Image Hosting
  image-20211204013246251 
 进入之后可以看到左侧有一个API Token，进去点击生成令牌，然后会出现一串字符，这个会在后面需要用到，可以先保存起来，到这里SM.MS的部分就结束了
  image-20211204014118980 
-Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它
- image-20211204015116329 
-下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去
-C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了之后，在状态栏"><meta name="twitter:card" content="summary_large_image">
+Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它，插入图片时的操作和下面的网络与本地图片上传规则可以先不更改，等成功后再操作
+ image-20211204015116329.png 
+下载完了之后，打开配置文件，用下面的代码替换掉配置文件里的内容，并把上面SM.MS里的令牌复制到token后面
+{ &amp;#34;picBed&amp;#34;: { &amp;#34;uploader&amp;#34;: &amp;#34;smms&amp;#34;, // 代表当前的默认上传图床为 SM.MS,  &amp;#34;smms&amp;#34;: { &amp;#34;token&amp;#34;: &amp;#34;&amp;#34; // 从 https://sm.ms/home/apitoken 获取的 token  } }, &amp;#34;picgoPlugins&amp;#34;: {} // 为插件预留 } 然后点击验证图片上传选项，就可以看到图片上传成功了，这时候就可以把插入图片时的操作换为上图中的上传图像，安心写作了
+ image-20211204232732599"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://magicpara.github.io/' />
     <link rel="shortcut icon" href="favicon.png" />
 
@@ -138,7 +141,7 @@ C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了
 </header>
 
     <section class="article-content">
-    <h3 id="准备smms图床">准备SM.MS图床</h3>
+    <h2 id="准备smms图床">准备SM.MS图床</h2>
 <p>先自行注册一个账号</p>
 <p>SM.MS注册地址：<a class="link" href="https://sm.ms/register"  target="_blank" rel="noopener"
     >Register - SM.MS - Simple Free Image Hosting</a></p>
@@ -172,8 +175,8 @@ C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了
 	<figcaption>image-20211204014118980</figcaption>
 	
 </figure></p>
-<h3 id="typora配置picgo-core">Typora配置PicGo-Core</h3>
-<p>首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它</p>
+<h2 id="typora配置picgo-core">Typora配置PicGo-Core</h2>
+<p>首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它，插入图片时的操作和下面的网络与本地图片上传规则可以先不更改，等成功后再操作</p>
 <p><figure 
 	>
 	<a href="https://s2.loli.net/2021/12/04/VPwhv1GNl2IJKUF.png" >
@@ -182,15 +185,37 @@ C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了
 			
 			
 			loading="lazy"
-			alt="image-20211204015116329">
+			alt="image-20211204015116329.png">
 	</a>
 	
-	<figcaption>image-20211204015116329</figcaption>
+	<figcaption>image-20211204015116329.png</figcaption>
 	
 </figure></p>
-<p>下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去</p>
-<pre tabindex="0"><code>C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64
-</code></pre><p>进入了之后，在状态栏</p>
+<p>下载完了之后，打开配置文件，用下面的代码替换掉配置文件里的内容，并把上面SM.MS里的令牌复制到token后面</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;picBed&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;uploader&#34;</span><span class="p">:</span> <span class="s2">&#34;smms&#34;</span><span class="p">,</span> <span class="c1">// 代表当前的默认上传图床为 SM.MS,
+</span><span class="c1"></span>    <span class="nt">&#34;smms&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&#34;token&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span> <span class="c1">// 从 https://sm.ms/home/apitoken 获取的 token
+</span><span class="c1"></span>    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;picgoPlugins&#34;</span><span class="p">:</span> <span class="p">{}</span> <span class="c1">// 为插件预留
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>然后点击验证图片上传选项，就可以看到图片上传成功了，这时候就可以把插入图片时的操作换为上图中的上传图像，安心写作了</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2021/12/04/NsgPZYMKaFB3rhX.png" >
+		<img src="https://s2.loli.net/2021/12/04/NsgPZYMKaFB3rhX.png"
+			
+			
+			
+			loading="lazy"
+			alt="image-20211204232732599">
+	</a>
+	
+	<figcaption>image-20211204232732599</figcaption>
+	
+</figure></p>
 
 </section>
 
@@ -344,12 +369,8 @@ C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64 进入了
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li>
-      <ol>
-        <li><a href="#准备smms图床">准备SM.MS图床</a></li>
-        <li><a href="#typora配置picgo-core">Typora配置PicGo-Core</a></li>
-      </ol>
-    </li>
+    <li><a href="#准备smms图床">准备SM.MS图床</a></li>
+    <li><a href="#typora配置picgo-core">Typora配置PicGo-Core</a></li>
   </ol>
 </nav>
                 </div>

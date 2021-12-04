@@ -12,7 +12,7 @@
         <pubDate>Sat, 04 Dec 2021 01:11:08 +0800</pubDate>
         
         <guid>https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/</guid>
-        <description>&lt;h3 id=&#34;准备smms图床&#34;&gt;准备SM.MS图床&lt;/h3&gt;
+        <description>&lt;h2 id=&#34;准备smms图床&#34;&gt;准备SM.MS图床&lt;/h2&gt;
 &lt;p&gt;先自行注册一个账号&lt;/p&gt;
 &lt;p&gt;SM.MS注册地址：&lt;a class=&#34;link&#34; href=&#34;https://sm.ms/register&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Register - SM.MS - Simple Free Image Hosting&lt;/a&gt;&lt;/p&gt;
@@ -46,8 +46,8 @@
 	&lt;figcaption&gt;image-20211204014118980&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;typora配置picgo-core&#34;&gt;Typora配置PicGo-Core&lt;/h3&gt;
-&lt;p&gt;首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它&lt;/p&gt;
+&lt;h2 id=&#34;typora配置picgo-core&#34;&gt;Typora配置PicGo-Core&lt;/h2&gt;
+&lt;p&gt;首先需要点击左上角的文件选项，进入偏好设置，来到图像这，把上传服务设置为PicGo-Core，然后下载它，插入图片时的操作和下面的网络与本地图片上传规则可以先不更改，等成功后再操作&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://s2.loli.net/2021/12/04/VPwhv1GNl2IJKUF.png&#34; &gt;
@@ -56,15 +56,37 @@
 			
 			
 			loading=&#34;lazy&#34;
-			alt=&#34;image-20211204015116329&#34;&gt;
+			alt=&#34;image-20211204015116329.png&#34;&gt;
 	&lt;/a&gt;
 	
-	&lt;figcaption&gt;image-20211204015116329&lt;/figcaption&gt;
+	&lt;figcaption&gt;image-20211204015116329.png&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;下载完了之后，可以直接复制下面我给的地址进入文件夹，也可以点击验证图片上传选项，找到带有picgo.exe的路径，复制粘贴进文件夹，注意别把最后面的picgo.exe复制进去&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;C:\Users\[写你自己的用户名]\AppData\Roaming\Typora\picgo\win64
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;进入了之后，在状态栏&lt;/p&gt;
+&lt;p&gt;下载完了之后，打开配置文件，用下面的代码替换掉配置文件里的内容，并把上面SM.MS里的令牌复制到token后面&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;picBed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;#34;uploader&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;smms&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 代表当前的默认上传图床为 SM.MS,
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;smms&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 从 https://sm.ms/home/apitoken 获取的 token
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;picgoPlugins&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 为插件预留
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后点击验证图片上传选项，就可以看到图片上传成功了，这时候就可以把插入图片时的操作换为上图中的上传图像，安心写作了&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2021/12/04/NsgPZYMKaFB3rhX.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2021/12/04/NsgPZYMKaFB3rhX.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;image-20211204232732599&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;image-20211204232732599&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -73,25 +95,22 @@
         <pubDate>Thu, 02 Dec 2021 23:35:22 +0800</pubDate>
         
         <guid>https://magicpara.github.io/p/git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
-        <description>&lt;h2 id=&#34;git部署hugo&#34;&gt;git部署Hugo&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;第一次部署hugo&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git init ##初始化仓库
+        <description>&lt;h2 id=&#34;拉取远程仓库&#34;&gt;拉取远程仓库&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init	##初始化仓库
+git remote add origin	##后面加上仓库链接，链接远程仓库
+git pull -u origin master	拉取至本地仓库
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;第一次部署hugo&#34;&gt;第一次部署hugo&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git init 
 git remote add origin ##后面加上仓库链接，链接远程仓库
 git add .
 git commit -m &amp;quot;first&amp;quot;
 git push -u origin master	##推送到远程仓库
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;后续更新hugo&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;后续更新hugo&#34;&gt;后续更新hugo&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git add .
 git status
 git commit -m &amp;quot;update&amp;quot;
 git push
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
         </item>
         <item>
         <title>配置环境变量</title>
