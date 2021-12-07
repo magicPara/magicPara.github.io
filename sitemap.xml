@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://magicpara.github.io/post/</loc>
-    <lastmod>2021-12-04T01:11:08+08:00</lastmod>
+    <loc>https://magicpara.github.io/p/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2021-12-05T11:40:27+08:00</lastmod>
   </url><url>
-    <loc>https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/</loc>
-    <lastmod>2021-12-04T01:11:08+08:00</lastmod>
+    <loc>https://magicpara.github.io/post/</loc>
+    <lastmod>2021-12-05T11:40:27+08:00</lastmod>
   </url><url>
     <loc>https://magicpara.github.io/</loc>
+    <lastmod>2021-12-05T11:40:27+08:00</lastmod>
+  </url><url>
+    <loc>https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/</loc>
     <lastmod>2021-12-04T01:11:08+08:00</lastmod>
   </url><url>
     <loc>https://magicpara.github.io/p/git%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/</loc>

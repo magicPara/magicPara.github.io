@@ -6,7 +6,89 @@
         <description>Recent content on 魔法师の手抄笔记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 04 Dec 2021 01:11:08 +0800</lastBuildDate><atom:link href="https://magicpara.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 05 Dec 2021 11:40:27 +0800</lastBuildDate><atom:link href="https://magicpara.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo&#43;GitHub搭建个人博客</title>
+        <link>https://magicpara.github.io/p/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+        <pubDate>Sun, 05 Dec 2021 11:40:27 +0800</pubDate>
+        
+        <guid>https://magicpara.github.io/p/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;我在搭建博客之前了解了几个博客框架，WordPress，Hexo，Hugo。&lt;/p&gt;
+&lt;p&gt;在这里面，WordPress据我了解是需要自己买服务器，白嫖党直接pass；Hexo用的Nodejs，无意间在网上看到了张图，放在下面了，我感觉自己是招架不住的；Hugo的话貌似配置起来简单，搭建也方便，最后就选了Hugo作为博客框架。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2021/12/07/lcOdMwm7WFXEp35.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2021/12/07/lcOdMwm7WFXEp35.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;image-20211207001625454&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;image-20211207001625454&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h2&gt;
+&lt;p&gt;这里个人是推荐用包管理工具进行安装。其实以前用过一段时间Linux，奈何软件太少，只能退回Windows，一直对Linux那个极其方便的包管理工具很留念。后来就是在搭建这个Hugo博客的时候发现Windows上还有Chocolate和Scoop这两个包管理工具，极力推荐大家尝试一下，下面会附上两个工具的安装方法。&lt;/p&gt;
+&lt;h3 id=&#34;方法一利用scoop安装hugo&#34;&gt;方法一：利用Scoop安装Hugo&lt;/h3&gt;
+&lt;p&gt;先是打开PowerShell，输入下面两条命令来安装Scoop&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;set-executionpolicy remotesigned -scope currentuser
+iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果看到下面的提示就是安装成功&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Scoop was installed successfully!
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后就可以打开CMD，输入指令回车就会自动安装了。这里二选一就行，因为我后面选择的主题是需要用到扩展版的，所以我这里就是用的第二条指令&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;scoop install hugo
+scoop install hugo-extended		//如果打算跟我安装同一个主题的话就安装这一个
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;方法二利用chocolate安装hugo&#34;&gt;方法二：利用Chocolate安装Hugo&lt;/h3&gt;
+&lt;p&gt;这里需要管理员打开PowerShell，才能够安装Chocolate，如果输入下面的命令没看到报错基本就是安装成功了，注意，下面是一条命令，直接复制粘贴上去就行了&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;跟上面Scoop一样，在CMD里面输入，这里也放了两条指令，根据自己需求来就行&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;choco install hugo -confirm
+choco install hugo-extended -confirm
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;验证hugo安装&#34;&gt;验证Hugo安装&lt;/h3&gt;
+&lt;p&gt;验证Hugo是否安装成功，只需要在CMD里面输入Hugo version就会显示安装的Hugo版本号了&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2021/12/07/ClrcqHykE1PpJVm.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2021/12/07/ClrcqHykE1PpJVm.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;image-20211207231659496&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;image-20211207231659496&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;创建本地博客&#34;&gt;创建本地博客&lt;/h2&gt;
+&lt;p&gt;我个人习惯是把博客直接放到桌面上，还能时刻提醒我还有博客这玩意QAQ，你们自己可以放到自己喜欢的地方。&lt;/p&gt;
+&lt;h3 id=&#34;本地博客文件的创建&#34;&gt;本地博客文件的创建&lt;/h3&gt;
+&lt;p&gt;打开终端后输入下面的命令&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new site blog		//创建本地博客文件
+cd ./blog				//进入博客文件夹
+hugo server				//启动博客
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;启动完之后可以进入默认的网址查看，不过还没有配置主题，所以只会出现一个完全空白的网页，网址可以在刚刚输入的命令行里找到，按住Ctrl再左键点击就能直接打开网页&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://s2.loli.net/2021/12/07/KCko1FT7jWxbf3G.png&#34; &gt;
+		&lt;img src=&#34;https://s2.loli.net/2021/12/07/KCko1FT7jWxbf3G.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;image-20211207235159627&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;image-20211207235159627&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;博客添加主题&#34;&gt;博客添加主题&lt;/h3&gt;
+&lt;p&gt;我这里选择的是Stack主题&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Typora&#43;PicGo Core&#43;SM.MS实现自动上传图片</title>
         <link>https://magicpara.github.io/p/typora-picgo-core-sm.ms%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/</link>
         <pubDate>Sat, 04 Dec 2021 01:11:08 +0800</pubDate>
