@@ -5,11 +5,11 @@
 在这里面，WordPress据我了解是需要自己买服务器，白嫖党直接pass；Hexo用的Nodejs，无意间在网上看到了张图，放在下面了，我感觉自己是招架不住的；Hugo的话貌似配置起来简单，搭建也方便，最后就选了Hugo作为博客框架。
  image-20211207001625454 
 安装Hugo 这里个人是推荐用包管理工具进行安装。其实以前用过一段时间Linux，奈何软件太少，只能退回Windows，一直对Linux那个极其方便的包管理工具很留念。后来就是在搭建这个Hugo博客的时候发现Windows上还有Chocolate和Scoop这两个包管理工具，极力推荐大家尝试一下，下面会附上两个工具的安装方法。
-方法一：利用Scoop安装Hugo 先是打开PowerShell，输入下面两条命令来安装Scoop
+方法一：利用Scoop安装Hugo 先是打开终端，输入下面两条命令来安装Scoop
 set-executionpolicy remotesigned -scope currentuser iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;) 如果看到下面的提示就是安装成功
-Scoop was installed successfully! 然后就可以打开CMD，输入指令回车就会自动安装了。这里二选一就行，因为我后面选择的主题是需要用到扩展版的，所以我这里就是用的第二条指令
-scoop install hugo scoop install hugo-extended	//如果打算跟我安装同一个主题的话就安装这一个 方法二：利用Chocolate安装Hugo 这里需要管理员打开PowerShell，才能够安装Chocolate，如果输入下面的命令没看到报错基本就是安装成功了，注意，下面是一条命令，直接复制粘贴上去就行了
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;)) 跟上面Scoop一样，在CMD里面输入，这里也放了两条指令，根据自己需求来就行
+Scoop was installed successfully! 然后就可以输入指令回车就会自动安装了。这里二选一就行，因为我后面选择的主题是需要用到扩展版的，所以我这里就是用的第二条指令
+scoop install hugo scoop install hugo-extended	//如果打算跟我安装同一个主题的话就安装这一个 方法二：利用Chocolate安装Hugo 这里需要管理员打开终端，才能够安装Chocolate，如果输入下面的命令没看到报错基本就是安装成功了，注意，下面是一条命令，直接复制粘贴上去就行了
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;)) 跟上面Scoop一样，在终端里面输入，这里也放了两条指令，根据自己需求来就行
 choco install hugo -confirm choco install hugo-extended -confirm 验证Hugo安装 验证Hugo是否安装成功，只需要在CMD里面输入Hugo version就会显示安装的Hugo版本号了
  image-20211207231659496 
 创建本地博客 我个人习惯是把博客直接放到桌面上，还能时刻提醒我还有博客这玩意QAQ，你们自己可以放到自己喜欢的地方。
@@ -23,11 +23,11 @@ hugo new site blog	//创建本地博客文件 cd .'><title>Hugo&#43;GitHub搭建
 在这里面，WordPress据我了解是需要自己买服务器，白嫖党直接pass；Hexo用的Nodejs，无意间在网上看到了张图，放在下面了，我感觉自己是招架不住的；Hugo的话貌似配置起来简单，搭建也方便，最后就选了Hugo作为博客框架。
  image-20211207001625454 
 安装Hugo 这里个人是推荐用包管理工具进行安装。其实以前用过一段时间Linux，奈何软件太少，只能退回Windows，一直对Linux那个极其方便的包管理工具很留念。后来就是在搭建这个Hugo博客的时候发现Windows上还有Chocolate和Scoop这两个包管理工具，极力推荐大家尝试一下，下面会附上两个工具的安装方法。
-方法一：利用Scoop安装Hugo 先是打开PowerShell，输入下面两条命令来安装Scoop
+方法一：利用Scoop安装Hugo 先是打开终端，输入下面两条命令来安装Scoop
 set-executionpolicy remotesigned -scope currentuser iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;) 如果看到下面的提示就是安装成功
-Scoop was installed successfully! 然后就可以打开CMD，输入指令回车就会自动安装了。这里二选一就行，因为我后面选择的主题是需要用到扩展版的，所以我这里就是用的第二条指令
-scoop install hugo scoop install hugo-extended	//如果打算跟我安装同一个主题的话就安装这一个 方法二：利用Chocolate安装Hugo 这里需要管理员打开PowerShell，才能够安装Chocolate，如果输入下面的命令没看到报错基本就是安装成功了，注意，下面是一条命令，直接复制粘贴上去就行了
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;)) 跟上面Scoop一样，在CMD里面输入，这里也放了两条指令，根据自己需求来就行
+Scoop was installed successfully! 然后就可以输入指令回车就会自动安装了。这里二选一就行，因为我后面选择的主题是需要用到扩展版的，所以我这里就是用的第二条指令
+scoop install hugo scoop install hugo-extended	//如果打算跟我安装同一个主题的话就安装这一个 方法二：利用Chocolate安装Hugo 这里需要管理员打开终端，才能够安装Chocolate，如果输入下面的命令没看到报错基本就是安装成功了，注意，下面是一条命令，直接复制粘贴上去就行了
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;)) 跟上面Scoop一样，在终端里面输入，这里也放了两条指令，根据自己需求来就行
 choco install hugo -confirm choco install hugo-extended -confirm 验证Hugo安装 验证Hugo是否安装成功，只需要在CMD里面输入Hugo version就会显示安装的Hugo版本号了
  image-20211207231659496 
 创建本地博客 我个人习惯是把博客直接放到桌面上，还能时刻提醒我还有博客这玩意QAQ，你们自己可以放到自己喜欢的地方。
@@ -41,11 +41,11 @@ hugo new site blog	//创建本地博客文件 cd .'>
 在这里面，WordPress据我了解是需要自己买服务器，白嫖党直接pass；Hexo用的Nodejs，无意间在网上看到了张图，放在下面了，我感觉自己是招架不住的；Hugo的话貌似配置起来简单，搭建也方便，最后就选了Hugo作为博客框架。
  image-20211207001625454 
 安装Hugo 这里个人是推荐用包管理工具进行安装。其实以前用过一段时间Linux，奈何软件太少，只能退回Windows，一直对Linux那个极其方便的包管理工具很留念。后来就是在搭建这个Hugo博客的时候发现Windows上还有Chocolate和Scoop这两个包管理工具，极力推荐大家尝试一下，下面会附上两个工具的安装方法。
-方法一：利用Scoop安装Hugo 先是打开PowerShell，输入下面两条命令来安装Scoop
+方法一：利用Scoop安装Hugo 先是打开终端，输入下面两条命令来安装Scoop
 set-executionpolicy remotesigned -scope currentuser iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;) 如果看到下面的提示就是安装成功
-Scoop was installed successfully! 然后就可以打开CMD，输入指令回车就会自动安装了。这里二选一就行，因为我后面选择的主题是需要用到扩展版的，所以我这里就是用的第二条指令
-scoop install hugo scoop install hugo-extended	//如果打算跟我安装同一个主题的话就安装这一个 方法二：利用Chocolate安装Hugo 这里需要管理员打开PowerShell，才能够安装Chocolate，如果输入下面的命令没看到报错基本就是安装成功了，注意，下面是一条命令，直接复制粘贴上去就行了
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;)) 跟上面Scoop一样，在CMD里面输入，这里也放了两条指令，根据自己需求来就行
+Scoop was installed successfully! 然后就可以输入指令回车就会自动安装了。这里二选一就行，因为我后面选择的主题是需要用到扩展版的，所以我这里就是用的第二条指令
+scoop install hugo scoop install hugo-extended	//如果打算跟我安装同一个主题的话就安装这一个 方法二：利用Chocolate安装Hugo 这里需要管理员打开终端，才能够安装Chocolate，如果输入下面的命令没看到报错基本就是安装成功了，注意，下面是一条命令，直接复制粘贴上去就行了
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;)) 跟上面Scoop一样，在终端里面输入，这里也放了两条指令，根据自己需求来就行
 choco install hugo -confirm choco install hugo-extended -confirm 验证Hugo安装 验证Hugo是否安装成功，只需要在CMD里面输入Hugo version就会显示安装的Hugo版本号了
  image-20211207231659496 
 创建本地博客 我个人习惯是把博客直接放到桌面上，还能时刻提醒我还有博客这玩意QAQ，你们自己可以放到自己喜欢的地方。
@@ -170,18 +170,18 @@ hugo new site blog	//创建本地博客文件 cd ."><meta name="twitter:card" co
 <h2 id="安装hugo">安装Hugo</h2>
 <p>这里个人是推荐用包管理工具进行安装。其实以前用过一段时间Linux，奈何软件太少，只能退回Windows，一直对Linux那个极其方便的包管理工具很留念。后来就是在搭建这个Hugo博客的时候发现Windows上还有Chocolate和Scoop这两个包管理工具，极力推荐大家尝试一下，下面会附上两个工具的安装方法。</p>
 <h3 id="方法一利用scoop安装hugo">方法一：利用Scoop安装Hugo</h3>
-<p>先是打开PowerShell，输入下面两条命令来安装Scoop</p>
+<p>先是打开终端，输入下面两条命令来安装Scoop</p>
 <pre tabindex="0"><code>set-executionpolicy remotesigned -scope currentuser
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 </code></pre><p>如果看到下面的提示就是安装成功</p>
 <pre tabindex="0"><code>Scoop was installed successfully!
-</code></pre><p>然后就可以打开CMD，输入指令回车就会自动安装了。这里二选一就行，因为我后面选择的主题是需要用到扩展版的，所以我这里就是用的第二条指令</p>
+</code></pre><p>然后就可以输入指令回车就会自动安装了。这里二选一就行，因为我后面选择的主题是需要用到扩展版的，所以我这里就是用的第二条指令</p>
 <pre tabindex="0"><code>scoop install hugo
 scoop install hugo-extended		//如果打算跟我安装同一个主题的话就安装这一个
 </code></pre><h3 id="方法二利用chocolate安装hugo">方法二：利用Chocolate安装Hugo</h3>
-<p>这里需要管理员打开PowerShell，才能够安装Chocolate，如果输入下面的命令没看到报错基本就是安装成功了，注意，下面是一条命令，直接复制粘贴上去就行了</p>
+<p>这里需要管理员打开终端，才能够安装Chocolate，如果输入下面的命令没看到报错基本就是安装成功了，注意，下面是一条命令，直接复制粘贴上去就行了</p>
 <pre tabindex="0"><code>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-</code></pre><p>跟上面Scoop一样，在CMD里面输入，这里也放了两条指令，根据自己需求来就行</p>
+</code></pre><p>跟上面Scoop一样，在终端里面输入，这里也放了两条指令，根据自己需求来就行</p>
 <pre tabindex="0"><code>choco install hugo -confirm
 choco install hugo-extended -confirm
 </code></pre><h3 id="验证hugo安装">验证Hugo安装</h3>
@@ -204,10 +204,10 @@ choco install hugo-extended -confirm
 <p>我个人习惯是把博客直接放到桌面上，还能时刻提醒我还有博客这玩意QAQ，你们自己可以放到自己喜欢的地方。</p>
 <h3 id="本地博客文件的创建">本地博客文件的创建</h3>
 <p>打开终端后输入下面的命令</p>
-<pre tabindex="0"><code>hugo new site blog		//创建本地博客文件
+<pre tabindex="0"><code>hugo new site blog			//创建本地博客文件
 cd ./blog				//进入博客文件夹
 hugo server				//启动博客
-</code></pre><p>启动完之后可以进入默认的网址查看，不过还没有配置主题，所以只会出现一个完全空白的网页，网址可以在刚刚输入的命令行里找到，按住Ctrl再左键点击就能直接打开网页</p>
+</code></pre><p>启动完之后可以进入默认的网址查看，不过还没有配置主题，所以只会出现一个完全空白的网页，网址可以在刚刚输入的命令行里找到，如果使用WT终端的话按住Ctrl再左键点击就能直接打开网页</p>
 <p><figure 
 	>
 	<a href="https://s2.loli.net/2021/12/07/KCko1FT7jWxbf3G.png" >
@@ -225,7 +225,68 @@ hugo server				//启动博客
 <h3 id="博客添加主题">博客添加主题</h3>
 <p>我这里使用<a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
     >Hugo-theme-stack</a>作为演示，想要其他主题的也可以去<a class="link" href="https://www.gohugo.org/theme/"  target="_blank" rel="noopener"
-    >皮肤列表 - Hugo中文文档 </a>里面看看。</p>
+    >皮肤列表 - Hugo中文文档 </a>里面看看。在博客文件夹里打开终端，用git来下载</p>
+<pre tabindex="0"><code>cd .\themes\
+git clone git@github.com:CaiJimmy/hugo-theme-stack.git
+</code></pre><p>下载完了之后进入主题文件夹找到exampleSite文件夹，把里面的文件都复制粘贴到博客主目录里面，嫌麻烦的复制粘贴下面的命令在更改的终端里运行就行，然后可以运行一下本地博客预览一下主题</p>
+<pre tabindex="0"><code>cp .\hugo-theme-stack\exampleSite\* ../ -r		//复制粘贴主题文件
+cd ../
+hugo server						//启动博客服务
+</code></pre><h3 id="生成静态博客文件">生成静态博客文件</h3>
+<p>输入下面简短的命令后就会出现一个叫public的文件夹，这个就是之后要推上GitHub的文件</p>
+<pre tabindex="0"><code>hugo
+</code></pre><p>然后你就会发现这里有个坑。。。</p>
+<p><figure 
+	>
+	<a href="https://s2.loli.net/2021/12/09/jUf5toK92EZ8y1W.png" >
+		<img src="https://s2.loli.net/2021/12/09/jUf5toK92EZ8y1W.png"
+			
+			
+			
+			loading="lazy"
+			alt="image-20211209000813889">
+	</a>
+	
+	<figcaption>image-20211209000813889</figcaption>
+	
+</figure></p>
+<p>可以看到报错文件，问题位置在第32行，其实当遇到问题时，比起解决问题，我更倾向于解决提出问题的人，所以我这里直接把这篇文章删掉就行了</p>
+<pre tabindex="0"><code>rm .\content\post\rich-content		//删除问题文章
+hugo					//创建静态博客文件
+ls					//如果有public文件夹就是成功创建了
+</code></pre><h2 id="部署到github">部署到github</h2>
+<p>可以根据个人情况选择<a class="link" href="https://github.com/"  target="_blank" rel="noopener"
+    >GitHub</a>和<a class="link" href="https://gitee.com/"  target="_blank" rel="noopener"
+    >Gitee</a>，这里选择GitHub作为演示。不过在创建GitHub仓库前，需要先安装Git。</p>
+<h3 id="git安装">Git安装</h3>
+<p>可以自己去<a class="link" href="https://git-scm.com/"  target="_blank" rel="noopener"
+    >Git</a>里面下载安装，一路点下一部就行，也可以用Chocolate或者Scoop来进行安装，记住要管理员打开终端</p>
+<pre tabindex="0"><code>choco install git.install		//Chocolate安装Git	
+scoop install git			//Scoop安装Git
+git version				//检查是否安装成功
+</code></pre><h3 id="创建仓库">创建仓库</h3>
+<p>光标移到右上角头像，来到Your repositories里面，点击绿色的New来创建仓库。仓库必须是Public的，名字需要些自己账号的名字加上固定的网站后缀，填写这两项后就可以直接创建了</p>
+<pre tabindex="0"><code>账号名字.github.io
+</code></pre><p><figure 
+	>
+	<a href="https://s2.loli.net/2021/12/08/PWbwyHGs8UrkleI.png" >
+		<img src="https://s2.loli.net/2021/12/08/PWbwyHGs8UrkleI.png"
+			
+			
+			
+			loading="lazy"
+			alt="image-20211208234102705">
+	</a>
+	
+	<figcaption>image-20211208234102705</figcaption>
+	
+</figure></p>
+<p>创建完之后来到仓库页面，会来到Quick setup页面，复制页面中的链接，HTTPS跟SSH都行，然后来到public文件夹里打开终端</p>
+<pre tabindex="0"><code>git init
+git commit -m &quot;first commit&quot;	
+git remote add origin 			//这里填入自己复制的链接
+git push -u origin master
+</code></pre><p>完成后可能需要过几分钟，在地址栏输入仓库名称就能够看到自己的网站了</p>
 
 </section>
 
@@ -391,6 +452,13 @@ hugo server				//启动博客
       <ol>
         <li><a href="#本地博客文件的创建">本地博客文件的创建</a></li>
         <li><a href="#博客添加主题">博客添加主题</a></li>
+        <li><a href="#生成静态博客文件">生成静态博客文件</a></li>
+      </ol>
+    </li>
+    <li><a href="#部署到github">部署到github</a>
+      <ol>
+        <li><a href="#git安装">Git安装</a></li>
+        <li><a href="#创建仓库">创建仓库</a></li>
       </ol>
     </li>
   </ol>
