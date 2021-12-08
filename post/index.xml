@@ -57,14 +57,5 @@ Typora配置PicGo-Core 首先需要点击左上角的文件选项，进入偏好
       <description>拉取远程仓库 git init	##初始化仓库 git remote add origin	##后面加上仓库链接，链接远程仓库 git pull -u origin master	拉取至本地仓库 第一次部署hugo git init git remote add origin ##后面加上仓库链接，链接远程仓库 git add . git commit -m &amp;quot;first&amp;quot; git push -u origin master	##推送到远程仓库 后续更新hugo git add . git status git commit -m &amp;quot;update&amp;quot; git push </description>
     </item>
     
-    <item>
-      <title>配置环境变量</title>
-      <link>https://magicpara.github.io/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
-      <pubDate>Thu, 02 Dec 2021 23:20:26 +0800</pubDate>
-      
-      <guid>https://magicpara.github.io/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

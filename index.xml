@@ -85,7 +85,9 @@ hugo server				//启动博客
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;h3 id=&#34;博客添加主题&#34;&gt;博客添加主题&lt;/h3&gt;
-&lt;p&gt;我这里选择的是Stack主题&lt;/p&gt;
+&lt;p&gt;我这里使用&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo-theme-stack&lt;/a&gt;作为演示，想要其他主题的也可以去&lt;a class=&#34;link&#34; href=&#34;https://www.gohugo.org/theme/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;皮肤列表 - Hugo中文文档 &lt;/a&gt;里面看看。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -193,14 +195,6 @@ git status
 git commit -m &amp;quot;update&amp;quot;
 git push
 &lt;/code&gt;&lt;/pre&gt;</description>
-        </item>
-        <item>
-        <title>配置环境变量</title>
-        <link>https://magicpara.github.io/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
-        <pubDate>Thu, 02 Dec 2021 23:20:26 +0800</pubDate>
-        
-        <guid>https://magicpara.github.io/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
-        <description></description>
         </item>
         
     </channel>
